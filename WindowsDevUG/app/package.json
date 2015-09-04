@@ -1,0 +1,20 @@
+{
+    "name": "tns-template-screen-builder",
+    "main": "app.js",
+    "version": "1.1.0",
+    "author": "Telerik <support@telerik.com>",
+    "description": "Nativescript Screen Builder template",
+    "license": "BSD",
+    "keywords": [
+        "telerik",
+        "mobile",
+        "nativescript",
+        "{N}",
+        "tns",
+        "appbuilder",
+        "template"
+    ],
+    "repository": {
+        "url": "https://github.com/NativeScript/NativeScript/commit/ffc1fcb030cd77e8b630e0f3ef3cf3694e36be43"
+    }
+}
