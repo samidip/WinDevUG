@@ -1,0 +1,28 @@
+{
+  "ProjectName": "WindowsDevUG",
+  "ProjectGuid": "879c2ef8-6930-45df-bcf0-2ff2281ab4e4",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.WindowsDevUG",
+  "DisplayName": "WindowsDevUG",
+  "Author": "",
+  "Description": "WindowsDevUG",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "1.2.3",
+  "Framework": "NativeScript"
+}

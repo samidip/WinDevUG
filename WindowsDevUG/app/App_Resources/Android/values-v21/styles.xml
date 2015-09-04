@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--
+    Application theme.
+
+      Warning! Due to different default theme Android 5.0+ uses only values-v21 to style the app.
+  -->
+  <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBarOverlay">true</item>
+    <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+    <item name="android:actionMenuTextColor">#fff</item>
+    <item name="android:windowContentOverlay">@null</item>
+  </style>
+
+  <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    <item name="android:displayOptions"></item>
+  </style>
+
+</resources>
