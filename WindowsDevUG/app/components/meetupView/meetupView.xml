@@ -1,41 +1,66 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="utils/widgets" loaded="pageLoaded">
-
-    <GridLayout rows="auto, *">
-        <widgets:action-bar />
-        <StackLayout row="1">
-
-            <GridLayout rows="*">
-
-                <ListView items="{{ listItems }}">
-
-                    <ListView.itemTemplate>
-                        <GridLayout columns="48, *" cssClass="padded-label">
-                            <StackLayout height="50" />
-
-                            <Image col="0" width="32" height="32" margin="8 6" src="{{ icon }}" />
-
-
-                            <StackLayout col="1" cssClass="padded-label-stack">
-                                <Label cssClass="title-label">
-                                    <Label.formattedText>
-                                        <FormattedString>
-                                            <FormattedString.spans>
-                                                <Span text="{{ header }}" fontAttributes="Bold" textWrap="true" />
-                                            </FormattedString.spans>
-                                        </FormattedString>
-                                    </Label.formattedText>
-                                </Label>
-                                <Label text="{{ description }}" textWrap="true" />
-                            </StackLayout>
-
-                        </GridLayout>
-                    </ListView.itemTemplate>
-                </ListView>
-            </GridLayout>
-            <!-- additional view content -->
-
-            <!-- START_CUSTOM_CODE_meetupView -->
-            <!-- END_CUSTOM_CODE_meetupView -->
-        </StackLayout>
-    </GridLayout>
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="pageNavigatedTo">
+ 
+    <TabView id="meetupTabView">
+        <TabView.items>
+          
+            <TabViewItem title="What" iconSource="~/resources/UGIcon.png">
+            <TabViewItem.view>
+              <Image src="{{ meetupImageURL }}" />
+            </TabViewItem.view>
+          </TabViewItem>  
+            
+          <TabViewItem title="Details" iconSource="~/resources/PresentationIcon.png">
+            <TabViewItem.view>
+              <ScrollView>
+              <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
+                    <Label text="Topic:" cssClass="headerText" />
+              		<Label text="{{ meetupTopic }}" textWrap="true" />
+              		<Label text="Abstract:" cssClass="headerText" marginTop="15" />
+                  	<Label text="{{ meetupAbstract }}" textWrap="true" />
+                    <Label text="Specials:" cssClass="headerText" marginTop="15" />
+              		<Label text="{{ meetupSpecials }}" textWrap="true" />  
+              </StackLayout>  
+              </ScrollView>  
+            </TabViewItem.view>
+          </TabViewItem>
+          
+          <TabViewItem title="Speaker" iconSource="~/resources/SpeakerIcon.png">
+            <TabViewItem.view>
+              <ScrollView>
+              <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
+                  	<Image src="{{ speakerImageURL }}" />
+                    <Label text="Speaker:" cssClass="headerText" marginTop="15" />
+              		<Label text="{{ speakerName }}" textWrap="true" />
+              		<Label text="Twitter:" cssClass="headerText" marginTop="15" />
+                  	<Label text="{{ speakerTwitter }}" textWrap="true" />
+                    <Label text="Bio:" cssClass="headerText" marginTop="15" />
+              		<Label text="{{ speakerBio }}" textWrap="true" />  
+              </StackLayout>  
+              </ScrollView>  
+            </TabViewItem.view>
+          </TabViewItem>
+          
+          <TabViewItem title="Ratings" iconSource="~/resources/RatingsIcon.png">
+            <TabViewItem.view>
+              <ScrollView>
+              <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">  
+                  <Label text="Your feedback on the UG Meetup -" cssClass="headerText" marginTop="15" />
+                  <Label text="Content Rating:" cssClass="headerText" marginTop="25" />
+                  <Slider minValue="0" maxValue="5" value="{{ contentRating }}" />
+                  <Label text="Speaker Rating:" cssClass="headerText" marginTop="15" />
+                  <Slider minValue="0" maxValue="5" value="{{ speakerRating }}" />
+                  <Label text="Logistcis Rating:" cssClass="headerText" marginTop="15" />
+                  <Slider minValue="0" maxValue="5" value="{{ logisticsRating }}" />
+                  <Label text="Additional Feedback:" cssClass="headerText" marginTop="20" />  
+                  <TextView hint="Type your comments here .." text="{{ meetupFeedback }}" />
+                  <Button text="Submit Ratings" marginTop="20" tap="ratingSubmission" />
+                  <Label id="thanksLabel" text="Thank you for the feedback!" cssClass="headerText" marginTop="20" visibility="collapsed" /> 
+              </StackLayout>  
+              </ScrollView>      
+            </TabViewItem.view>
+          </TabViewItem>
+            
+        </TabView.items>
+    </TabView>
+    
 </Page>

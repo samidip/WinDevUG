@@ -1,6 +1,7 @@
 var application = require('application');
 
-application.mainModule = 'navigation/navigation';
-// START_CUSTOM_CODE_nativeScriptApp
-// END_CUSTOM_CODE_nativeScriptApp
+global.everliveApiKey = "hWujvrbVIYl5C7vB";
+global.appWideMeetupList = [];
+
+application.mainModule = 'components/homeView/homeView';
 application.start();

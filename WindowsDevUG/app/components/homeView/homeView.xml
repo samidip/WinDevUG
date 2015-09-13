@@ -1,0 +1,61 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  
+	<TabView id="homeTabView">
+        <TabView.items>
+          
+            <TabViewItem title="About" iconSource="~/resources/AboutIcon.png">
+            <TabViewItem.view>
+                <ScrollView>
+              	<StackLayout orientation="vertical" horizontalAlignment="center" marginTop="20">
+                    <Image src="~/resources/WindowsDevUGLogo.png" />
+                    <Label text="The Windows Developer User Group App" marginTop="5" horizontalAlignment="center"/>
+                    <Label text="By Developers, For Developers!" marginTop="5" horizontalAlignment="center" />
+                    <Button text="Follow us on Twitter" marginTop="20" marginLeft="5" horizontalAlignment="left" />
+                    <Button text="Join our Meetup" marginTop="1" marginLeft="5" horizontalAlignment="left" />
+                    <Button text="Contact us" marginTop="1" marginLeft="5" horizontalAlignment="left" />
+                    <Label text="Where we meet:" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                </StackLayout>    
+                </ScrollView>    
+            </TabViewItem.view>
+          </TabViewItem>  
+            
+          <TabViewItem title="Meetups" iconSource="~/resources/PresentationIcon.png">
+            <TabViewItem.view>
+              <ScrollView>  
+              <StackLayout orientation="vertical" horizontalAlignment="center" marginTop="20" marginLeft="20" marginRight="20">
+                  <ListView items="{{ bindableMeetupItems }}" itemTap="meetupListItemTap">
+                     <ListView.itemTemplate>
+                         <StackLayout orientation="horizontal" marginBottom="10" marginTop="10">
+                            <Image src="~/resources/MeetupIcon.png" stretch ="none" width="30" height="30" />
+                         	<StackLayout orientation="vertical" horizontalAlignment="left" marginLeft="20">
+                                <Label text="{{ Month }}" cssClass="headerText" />
+                                <Label text="{{ Topic }}" textWrap="true" />
+                            </StackLayout>
+                         </StackLayout>
+                     </ListView.itemTemplate>      
+                  </ListView>     
+               </StackLayout>    
+               </ScrollView>   
+            </TabViewItem.view>
+          </TabViewItem>
+          
+          <TabViewItem title="Social" iconSource="~/resources/SocialIcon.png">
+            <TabViewItem.view>
+              <ScrollView>  
+              <Label text="Social Label" />
+              </ScrollView>    
+            </TabViewItem.view>
+          </TabViewItem>
+          
+          <TabViewItem title="Sponsors" iconSource="~/resources/SponsorsIcon.png">
+            <TabViewItem.view>
+              <ScrollView>  
+              <Label text="Sponsors Label" />
+              </ScrollView>    
+            </TabViewItem.view>
+          </TabViewItem>
+            
+        </TabView.items>
+    </TabView>
+    
+</Page>

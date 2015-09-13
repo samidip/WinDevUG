@@ -23,6 +23,11 @@ switch {
     horizontal-align: right;
 }
 
+.headerText {
+    font-size: 18;
+    font-weight: bold;
+}
+
 .action-bar {
     padding: 10 4;
     background-color: #e9e9e9;
