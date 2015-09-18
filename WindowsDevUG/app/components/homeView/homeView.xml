@@ -8,12 +8,13 @@
                 <ScrollView>
               	<StackLayout orientation="vertical" horizontalAlignment="center" marginTop="20">
                     <Image src="~/resources/WindowsDevUGLogo.png" />
-                    <Label text="The Windows Developer User Group App" marginTop="5" horizontalAlignment="center"/>
+                    <Label text="The Windows Developer User Group App" cssClass="headerText" marginTop="10" horizontalAlignment="center"/>
                     <Label text="By Developers, For Developers!" marginTop="5" horizontalAlignment="center" />
-                    <Button text="Follow us on Twitter" marginTop="20" marginLeft="5" horizontalAlignment="left" />
-                    <Button text="Join our Meetup" marginTop="1" marginLeft="5" horizontalAlignment="left" />
-                    <Button text="Contact us" marginTop="1" marginLeft="5" horizontalAlignment="left" />
-                    <Label text="Where we meet:" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                    <Label text="Meetup Details:" cssClass="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                    <Label text="3rd Monday/month @ 6-8 PM" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
+                    <Label text="Location:" cssClass="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                    <Label text="Improving Ohio" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
+                    <Label text="1 Easton Oval, Suite #175, Columbus OH" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
                 </StackLayout>    
                 </ScrollView>    
             </TabViewItem.view>
@@ -50,7 +51,17 @@
           <TabViewItem title="Sponsors" iconSource="~/resources/SponsorsIcon.png">
             <TabViewItem.view>
               <ScrollView>  
-              <Label text="Sponsors Label" />
+              <StackLayout orientation="vertical" horizontalAlignment="left" marginTop="20" marginLeft="20" marginRight="20">
+              	  <ListView items="{{ bindableSponsorItems }}">
+                     <ListView.itemTemplate>
+                         <StackLayout orientation="horizontal" marginBottom="10" marginTop="10">
+                            <Label text="{{ Name }}" cssClass="headerText" marginRight="15" />
+                            <Label text="|" cssClass="headerText" marginRight="15" /> 
+                         	<Image src="{{ Image }}" width="200" height="50" />
+                         </StackLayout>    
+                     </ListView.itemTemplate>      
+                  </ListView>     
+              </StackLayout>    
               </ScrollView>    
             </TabViewItem.view>
           </TabViewItem>

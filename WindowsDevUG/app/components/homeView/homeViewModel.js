@@ -1,6 +1,8 @@
 var everliveModule = require("../../baas/everlive.all.min");
 var observableModule = require("data/observable");
 
+var meetupsObservable = new observableModule.Observable();
+
 var everliveHook = new everliveModule({
     apiKey: global.everliveApiKey,
     scheme: "https"
@@ -15,8 +17,18 @@ meetupsList.get()
                  global.appWideMeetupList.push(data.result[i]);
               }
         });
-
-var meetupsObservable = new observableModule.Observable();
 meetupsObservable.set("bindableMeetupItems", bindableMeetupItems);
+
+var sponsorsList = [
+    {"Name":"Telerik", "Image":"~/resources/TelerikLogo.png", "URL":"someUrl"},
+    {"Name":"Improving", "Image":"~/resources/ImprovingLogo.jpg", "URL":"someUrl"},
+    {"Name":"Microsoft","Image": "~/resources/MicrosoftLogo.jpg", "URL":"someUrl"},
+    {"Name":"Infragistics", "Image":"~/resources/InfraLogo.JPG", "URL":"someUrl"},
+    {"Name":"ComponentOne", "Image":"~/resources/C1Logo.png", "URL":"someUrl"},
+    {"Name":"Pluralsight", "Image":"~/resources/PluralsightLogo.jpeg", "URL":"someUrl"},
+    {"Name":"Live360", "Image":"~/resources/Live360Logo.jpg", "URL":"someUrl"}
+];
+meetupsObservable.set("bindableSponsorItems", sponsorsList);
+
 
 exports.meetupsObservable = meetupsObservable;

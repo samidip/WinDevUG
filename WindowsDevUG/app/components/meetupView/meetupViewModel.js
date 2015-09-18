@@ -40,7 +40,15 @@ function InitializeRatings(){
 }
 
 function SubmitRatings(){
-    alert(JSON.stringify(meetupDetailsObservable.contentRating));
+    var ratingsHandle = everliveHook.data('Ratings');
+    ratingsHandle.create({'MeetupId': selectedMeetup.Id,
+        				  'ContentRating': meetupDetailsObservable.contentRating, 
+                          'SpeakerRating': meetupDetailsObservable.speakerRating,
+                          'LogisticsRating': meetupDetailsObservable.logisticsRating,
+                          'Feedback': meetupDetailsObservable.meetupFeedback})
+            .then(function(data){
+               
+            });
 }
 
 exports.meetupDetailsObservable = meetupDetailsObservable;

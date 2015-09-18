@@ -3,9 +3,16 @@ var frameModule = require("ui/frame");
 var colorModule = require("color");
 
 var vmModule = require("./meetupViewModel");
+var thankYouLabel;
+var contentRatingSlider, speakerRatingSlider, logisticsRatingSlider, feedbackTextView;
 
 function pageLoaded(args) {
     var page = args.object;
+    thankYouLabel = view.getViewById(page, "thanksLabel");
+    contentRatingSlider = view.getViewById(page, "contentRatingSlider");
+    speakerRatingSlider = view.getViewById(page, "speakerRatingSlider");
+    logisticsRatingSlider = view.getViewById(page, "logisticsRatingSlider");
+    feedbackTextField = view.getViewById(page, "feedbackTextField");
     
     if (page.ios) {
         page.ios.title = "Meetups";
@@ -33,6 +40,14 @@ function pageNavigatedTo (args) {
 
 function ratingSubmission (args){
     vmModule.SubmitRatings();
+    
+    var submitButton = args.object;
+    submitButton.opacity = ".2";
+    thankYouLabel.visibility = "visible";
+    contentRatingSlider.opacity = ".2";
+    speakerRatingSlider.opacity = ".2";
+    logisticsRatingSlider.opacity = ".2";
+    feedbackTextField.opacity = ".2";
 }
 
 exports.pageLoaded = pageLoaded;

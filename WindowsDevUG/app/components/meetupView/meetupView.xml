@@ -46,14 +46,14 @@
               <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">  
                   <Label text="Your feedback on the UG Meetup -" cssClass="headerText" marginTop="15" />
                   <Label text="Content Rating:" cssClass="headerText" marginTop="25" />
-                  <Slider minValue="0" maxValue="5" value="{{ contentRating }}" />
+                  <Slider id="contentRatingSlider" minValue="0" maxValue="5" value="{{ contentRating }}" />
                   <Label text="Speaker Rating:" cssClass="headerText" marginTop="15" />
-                  <Slider minValue="0" maxValue="5" value="{{ speakerRating }}" />
+                  <Slider id="speakerRatingSlider" minValue="0" maxValue="5" value="{{ speakerRating }}" />
                   <Label text="Logistcis Rating:" cssClass="headerText" marginTop="15" />
-                  <Slider minValue="0" maxValue="5" value="{{ logisticsRating }}" />
+                  <Slider id="logisticsRatingSlider" minValue="0" maxValue="5" value="{{ logisticsRating }}" />
                   <Label text="Additional Feedback:" cssClass="headerText" marginTop="20" />  
-                  <TextView hint="Type your comments here .." text="{{ meetupFeedback }}" />
-                  <Button text="Submit Ratings" marginTop="20" tap="ratingSubmission" />
+                  <TextField id="feedbackTextField" hint="Type your comments here .." text="{{ meetupFeedback }}" returnKeyType="done" />
+                  <Button text="Submit Ratings" marginTop="30" tap="ratingSubmission" cssClass="ratingsButton" />
                   <Label id="thanksLabel" text="Thank you for the feedback!" cssClass="headerText" marginTop="20" visibility="collapsed" /> 
               </StackLayout>  
               </ScrollView>      
