@@ -6,6 +6,9 @@ var vmModule = require("./homeViewModel");
 
 function pageLoaded(args) {
     var page = args.object;
+    vmModule.FetchMeetups();
+    vmModule.FetchSponsors();
+    vmModule.FetchTweets();
     page.bindingContext = vmModule.meetupsObservable;
     
     if (page.ios) {

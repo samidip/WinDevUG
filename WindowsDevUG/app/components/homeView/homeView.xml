@@ -43,7 +43,7 @@
           <TabViewItem title="Social" iconSource="~/resources/SocialIcon.png">
             <TabViewItem.view>
               <ScrollView>  
-              <Label text="Social Label" />
+              	<WebView src="{{ bindableTwitterFeed }}" />
               </ScrollView>    
             </TabViewItem.view>
           </TabViewItem>
@@ -51,13 +51,13 @@
           <TabViewItem title="Sponsors" iconSource="~/resources/SponsorsIcon.png">
             <TabViewItem.view>
               <ScrollView>  
-              <StackLayout orientation="vertical" horizontalAlignment="left" marginTop="20" marginLeft="20" marginRight="20">
+              <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
               	  <ListView items="{{ bindableSponsorItems }}">
                      <ListView.itemTemplate>
-                         <StackLayout orientation="horizontal" marginBottom="10" marginTop="10">
-                            <Label text="{{ Name }}" cssClass="headerText" marginRight="15" />
-                            <Label text="|" cssClass="headerText" marginRight="15" /> 
-                         	<Image src="{{ Image }}" width="200" height="50" />
+                         <StackLayout orientation="vertical" horizontalAlignment="left" marginBottom="15" marginTop="10">
+                             <Label text="{{ Name }}" cssClass="headerText" />
+                             <Button text="{{ URL }}" marginBottom="10" horizontalAlignment="left" /> 
+                             <Image src="{{ Image }}" width="300" horizontalAlignment="left" />
                          </StackLayout>    
                      </ListView.itemTemplate>      
                   </ListView>     
