@@ -8,8 +8,11 @@ var everliveHook = new everliveModule({
     scheme: "https"
 });
 
-function FetchMeetups(){
-    var bindableMeetupItems = [];
+if (global.appWideMeetupList.legth > 0){
+    meetupsObservable.set("bindableMeetupItems", global.appWideMeetupList);
+}
+else{
+    var bindableMeetupItems = [];;
     var meetupsList = everliveHook.data('Meetups');
     meetupsList.get()
             .then(function(data){
@@ -19,6 +22,10 @@ function FetchMeetups(){
                   }
             });
     meetupsObservable.set("bindableMeetupItems", bindableMeetupItems);
+}
+
+function FetchMeetups(){
+   
 }
 
 function FetchSponsors(){

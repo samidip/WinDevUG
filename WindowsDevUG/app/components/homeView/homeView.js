@@ -6,10 +6,6 @@ var vmModule = require("./homeViewModel");
 
 function pageLoaded(args) {
     var page = args.object;
-    vmModule.FetchMeetups();
-    vmModule.FetchSponsors();
-    vmModule.FetchTweets();
-    page.bindingContext = vmModule.meetupsObservable;
     
     if (page.ios) {
         page.ios.title = "WinDevUG";
@@ -25,6 +21,14 @@ function pageLoaded(args) {
     }
 }
 
+function pageNavigatedTo (args) {
+    var page = args.object;
+    vmModule.FetchMeetups();
+    vmModule.FetchSponsors();
+    vmModule.FetchTweets();
+    page.bindingContext = vmModule.meetupsObservable;
+}
+
 function meetupListItemTap(args){
     var appFrame = frameModule.topmost();
     var navigationParams = {
@@ -37,3 +41,4 @@ function meetupListItemTap(args){
 
 exports.pageLoaded = pageLoaded;
 exports.meetupListItemTap = meetupListItemTap;
+exports.pageNavigatedTo = pageNavigatedTo;
