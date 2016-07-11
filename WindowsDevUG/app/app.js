@@ -1,3 +1,4 @@
+// App start code.
 var application = require('application');
 
 global.everliveApiKey = "hWujvrbVIYl5C7vB";
