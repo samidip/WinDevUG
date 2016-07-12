@@ -5,14 +5,14 @@
           
             <TabViewItem title="About" iconSource="~/resources/AboutIcon.png">
             <TabViewItem.view>
-                <ScrollView>
+                <ScrollView marginBottom="30">
               	<StackLayout orientation="vertical" horizontalAlignment="center" marginTop="20">
                     <Image src="~/resources/WindowsDevUGLogo.png" />
-                    <Label text="The Windows Developer User Group App" cssClass="headerText" marginTop="10" horizontalAlignment="center"/>
+                    <Label text="The Windows Developer User Group App" class="headerText" marginTop="10" horizontalAlignment="center"/>
                     <Label text="By Developers, For Developers!" marginTop="5" horizontalAlignment="center" />
-                    <Label text="Meetup Details:" cssClass="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                    <Label text="Meetup Details:" class="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
                     <Label text="3rd Monday/month @ 6-8 PM" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
-                    <Label text="Location:" cssClass="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
+                    <Label text="Location:" class="headerText" marginLeft="5" marginTop="20" horizontalAlignment="Left" />
                     <Label text="Improving Ohio" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
                     <Label text="1 Easton Oval, Suite #175, Columbus OH" marginLeft="5" marginTop="5" horizontalAlignment="Left" />
                 </StackLayout>    
@@ -22,14 +22,14 @@
             
           <TabViewItem title="Meetups" iconSource="~/resources/PresentationIcon.png">
             <TabViewItem.view>
-              <ScrollView>  
+              <ScrollView marginBottom="30">  
               <StackLayout orientation="vertical" horizontalAlignment="center" marginTop="20" marginLeft="20" marginRight="20">
                   <ListView items="{{ bindableMeetupItems }}" itemTap="meetupListItemTap">
                      <ListView.itemTemplate>
                          <StackLayout orientation="horizontal" marginBottom="10" marginTop="10">
                             <Image src="~/resources/MeetupIcon.png" stretch ="none" width="30" height="30" />
                          	<StackLayout orientation="vertical" horizontalAlignment="left" marginLeft="20">
-                                <Label text="{{ Month }}" cssClass="headerText" />
+                                <Label text="{{ Month }}" class="headerText" />
                                 <Label text="{{ Topic }}" textWrap="true" />
                             </StackLayout>
                          </StackLayout>
@@ -42,7 +42,7 @@
           
           <TabViewItem title="Social" iconSource="~/resources/SocialIcon.png">
             <TabViewItem.view>
-              <ScrollView>  
+              <ScrollView marginBottom="30">  
               	<WebView src="{{ bindableTwitterFeed }}" />
               </ScrollView>    
             </TabViewItem.view>
@@ -50,12 +50,12 @@
           
           <TabViewItem title="Sponsors" iconSource="~/resources/SponsorsIcon.png">
             <TabViewItem.view>
-              <ScrollView>  
+              <ScrollView marginBottom="30">  
               <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
               	  <ListView items="{{ bindableSponsorItems }}">
                      <ListView.itemTemplate>
                          <StackLayout orientation="vertical" horizontalAlignment="left" marginBottom="15" marginTop="10">
-                             <Label text="{{ Name }}" cssClass="headerText" />
+                             <Label text="{{ Name }}" class="headerText" />
                              <Button text="{{ URL }}" marginBottom="10" horizontalAlignment="left" /> 
                              <Image src="{{ Image }}" width="300" horizontalAlignment="left" />
                          </StackLayout>    

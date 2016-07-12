@@ -11,13 +11,13 @@
             
           <TabViewItem title="Details" iconSource="~/resources/PresentationIcon.png">
             <TabViewItem.view>
-              <ScrollView>
+              <ScrollView marginBottom="30">
               <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
-                    <Label text="Topic:" cssClass="headerText" />
+                    <Label text="Topic:" class="headerText" />
               		<Label text="{{ meetupTopic }}" textWrap="true" />
-              		<Label text="Abstract:" cssClass="headerText" marginTop="15" />
+              		<Label text="Abstract:" class="headerText" marginTop="15" />
                   	<Label text="{{ meetupAbstract }}" textWrap="true" />
-                    <Label text="Specials:" cssClass="headerText" marginTop="15" />
+                    <Label text="Specials:" class="headerText" marginTop="15" />
               		<Label text="{{ meetupSpecials }}" textWrap="true" />  
               </StackLayout>  
               </ScrollView>  
@@ -26,14 +26,14 @@
           
           <TabViewItem title="Speaker" iconSource="~/resources/SpeakerIcon.png">
             <TabViewItem.view>
-              <ScrollView>
+              <ScrollView marginBottom="30">
               <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">
                   	<Image src="{{ speakerImageURL }}" />
-                    <Label text="Speaker:" cssClass="headerText" marginTop="15" />
+                    <Label text="Speaker:" class="headerText" marginTop="15" />
               		<Label text="{{ speakerName }}" textWrap="true" />
-              		<Label text="Twitter:" cssClass="headerText" marginTop="15" />
+              		<Label text="Twitter:" class="headerText" marginTop="15" />
                   	<Label text="{{ speakerTwitter }}" textWrap="true" />
-                    <Label text="Bio:" cssClass="headerText" marginTop="15" />
+                    <Label text="Bio:" class="headerText" marginTop="15" />
               		<Label text="{{ speakerBio }}" textWrap="true" />  
               </StackLayout>  
               </ScrollView>  
@@ -42,19 +42,19 @@
           
           <TabViewItem title="Ratings" iconSource="~/resources/RatingsIcon.png">
             <TabViewItem.view>
-              <ScrollView>
+              <ScrollView marginBottom="30">
               <StackLayout orientation="vertical" marginTop="20" marginLeft="20" marginRight="20">  
-                  <Label text="Your feedback on the UG Meetup -" cssClass="headerText" marginTop="15" />
-                  <Label text="Content Rating:" cssClass="headerText" marginTop="25" />
+                  <Label text="Your feedback on the UG Meetup -" class="headerText" marginTop="15" />
+                  <Label text="Content Rating:" class="headerText" marginTop="25" />
                   <Slider id="contentRatingSlider" minValue="0" maxValue="5" value="{{ contentRating }}" />
-                  <Label text="Speaker Rating:" cssClass="headerText" marginTop="15" />
+                  <Label text="Speaker Rating:" class="headerText" marginTop="15" />
                   <Slider id="speakerRatingSlider" minValue="0" maxValue="5" value="{{ speakerRating }}" />
-                  <Label text="Logistcis Rating:" cssClass="headerText" marginTop="15" />
+                  <Label text="Logistcis Rating:" class="headerText" marginTop="15" />
                   <Slider id="logisticsRatingSlider" minValue="0" maxValue="5" value="{{ logisticsRating }}" />
-                  <Label text="Additional Feedback:" cssClass="headerText" marginTop="20" />  
+                  <Label text="Additional Feedback:" class="headerText" marginTop="20" />  
                   <TextField id="feedbackTextField" hint="Type your comments here .." text="{{ meetupFeedback }}" returnKeyType="done" />
-                  <Button text="Submit Ratings" marginTop="30" tap="ratingSubmission" cssClass="ratingsButton" />
-                  <Label id="thanksLabel" text="Thank you for the feedback!" cssClass="headerText" marginTop="20" visibility="collapsed" /> 
+                  <Button text="Submit Ratings" marginTop="30" tap="ratingSubmission" class="ratingsButton" />
+                  <Label id="thanksLabel" text="Thank you for the feedback!" class="headerText" marginTop="20" visibility="collapsed" /> 
               </StackLayout>  
               </ScrollView>      
             </TabViewItem.view>

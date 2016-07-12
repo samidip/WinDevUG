@@ -14,7 +14,7 @@ image {
 label,
 textfield,
 searchbar,
-switch,
+switch
 {
     vertical-align: center;
 }
@@ -106,9 +106,3 @@ switch {
     margin: 20 0 0 0;
     padding: 0;
 }
-
-
-/* START_CUSTOM_CODE_nativeScriptApp */
-
-
-/* END_CUSTOM_CODE_nativeScriptApp */

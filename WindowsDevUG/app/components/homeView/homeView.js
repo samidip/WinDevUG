@@ -4,10 +4,12 @@ var colorModule = require("color");
 
 var vmModule = require("./homeViewModel");
 
-function pageLoaded(args) {
+function pageLoaded(args) 
+{
     var page = args.object;
     
-    if (page.ios) {
+    if (page.ios) 
+    {
         page.ios.title = "WinDevUG";
         var appFrame = frameModule.topmost();
         var controller = appFrame.ios.controller;
@@ -21,7 +23,8 @@ function pageLoaded(args) {
     }
 }
 
-function pageNavigatedTo (args) {
+function pageNavigatedTo (args) 
+{
     var page = args.object;
     vmModule.FetchMeetups();
     vmModule.FetchSponsors();
@@ -29,7 +32,8 @@ function pageNavigatedTo (args) {
     page.bindingContext = vmModule.meetupsObservable;
 }
 
-function meetupListItemTap(args){
+function meetupListItemTap(args)
+{
     var appFrame = frameModule.topmost();
     var navigationParams = {
         moduleName: "components/meetupView/meetupView",

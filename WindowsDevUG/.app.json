@@ -2,56 +2,40 @@
   "type": "NativeScript",
   "views": [
     {
-      "type": "view",
+      "type": "NativeScript:view",
+      "name": "meetupView",
       "components": [
         {
-          "type": "list",
+          "type": "NativeScript:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [],
           "name": "meetupViewModel",
           "dataProvider": "defaultProvider",
           "collection": "Meetups",
           "headerField": "Month",
           "subHeaderField": "Topic",
+          "isMapView": false,
           "iconField": true,
-          "masterDetails": false,
           "pullToRefresh": false,
-          "endlessScroll": false
+          "endlessScroll": false,
+          "deleteItemButton": false,
+          "detailHeaderFieldSource": "static",
+          "detailHeaderFieldValue": "Detail",
+          "addItemForm": false,
+          "editItemForm": false
         }
       ],
-      "name": "meetupView",
       "title": "Meetups",
       "addToNavigation": true,
       "icon": "organize"
-    },
-    {
-      "type": "view",
-      "components": [
-        {
-          "type": "about",
-          "name": "aboutViewModel",
-          "appName": "The Windows Developer User Group App",
-          "appVersion": "Version: Just Getting Started ...",
-          "appIcon": "WindowsDevUGLogo.png",
-          "appDescription": "By Developers, For Developers!",
-          "contactButton": true,
-          "contactLabel": "Contact us",
-          "contactMail": "windowsdevug@live.com",
-          "facebookButton": false,
-          "twitterButton": true,
-          "twitterLabel": "Follow us on Twitter",
-          "twitterLink": "https://twitter.com/windowsdevug"
-        }
-      ],
-      "name": "aboutView",
-      "title": "About",
-      "addToNavigation": true,
-      "icon": "info"
     }
   ],
   "dataProviders": [
     {
-      "type": "dataProvider",
-      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "type": "NativeScript:dataProvider",
       "name": "defaultProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
       "title": "DefaultProvider",
       "source": "everlive",
       "everliveKey": "hWujvrbVIYl5C7vB",

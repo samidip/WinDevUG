@@ -1,10 +1,10 @@
 {
-    "name": "tns-template-screen-builder",
+    "name": "tns-template-blank",
     "main": "app.js",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "author": "Telerik <support@telerik.com>",
-    "description": "Nativescript Screen Builder template",
-    "license": "BSD",
+    "description": "Nativescript blank project template",
+    "license": "Apache-2.0",
     "keywords": [
         "telerik",
         "mobile",
@@ -15,6 +15,6 @@
         "template"
     ],
     "repository": {
-        "url": "https://github.com/NativeScript/NativeScript/commit/ffc1fcb030cd77e8b630e0f3ef3cf3694e36be43"
+        "url": "https://github.com/NativeScript/NativeScript/commit/5a56e1cc94b698784a7f004f1b9634e64324e5c6"
     }
 }
